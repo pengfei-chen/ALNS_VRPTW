@@ -75,7 +75,7 @@ public class MyALNSSolution {
     
 	public void removeCustomer(int routePosition, int cusPosition) {
 		//TODO 未进行时间窗去重处理
-
+		// 移除点之后的处理
 		double[][] distance = instance.getDistanceMatrix();
 		
 		Route removenRoute = this.routes.get(routePosition);
@@ -136,7 +136,7 @@ public class MyALNSSolution {
 		this.routes.get(routePosition).getCost().time = time;
 		this.routes.get(routePosition).getCost().timeViolation = timeWindowViolation;
 		this.cost.timeViolation += timeWindowViolation;
-		
+		//  时间约束、容量约束成本放大了1000倍，放进成本函数里面。
 		this.cost.calculateTotalCost(this.alpha, this.beta);
 	}
 	

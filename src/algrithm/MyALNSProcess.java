@@ -156,7 +156,7 @@ public class MyALNSProcess {
     }
 
     private void handleWorseSolution(IALNSDestroy destroyOperator, IALNSRepair repairOperator, MyALNSSolution s_t) {
-        //概率接受较差解
+        //概率接受较差解：模拟退火
     	double p_accept = calculateProbabilityToAcceptTempSolutionAsNewCurrent(s_t);
         if (Math.random() < p_accept) {
             s_c = s_t;
@@ -247,6 +247,7 @@ public class MyALNSProcess {
         double random = Math.random();
         double threshold = 0.;
         for (IALNSDestroy dstr : destroy_ops) {
+            // 根据每种方法的概率选择该种方法
             threshold += dstr.getP();
             if (random <= threshold) {
                 dstr.drawn();
