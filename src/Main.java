@@ -19,7 +19,10 @@ import instance.Instance;
 * <p>Title: Main</p>  
 * <p>Description: </p>  
 * @author zll_hust  
-* @date 2020年3月14日  
+* @date 2020年3月14日
+ *
+ * 总的来说，这个框架很大，但是，却感觉不到特别深刻的点..
+ *
 */
 public class Main {
 
@@ -45,7 +48,7 @@ public class Main {
                 result[j] = solve(
                         instances[j],                    //需要测试的算例
                         "Solomon",                      // 算例类型,输入Homberger或Solomon，注意大写
-                        25,                        //客户点数量，Solomon可选择 25,50,100，Homberger可选择200，400
+                        100,                        //客户点数量，Solomon可选择 25,50,100，Homberger可选择200，400
                         ALNSConfiguration.DEFAULT,    //ALNS相关参数
                         new ControlParameter(
                                 false,                //历史满意解、当前满意解、新解的时序图，收敛效果展示

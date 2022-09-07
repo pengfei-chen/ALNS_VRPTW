@@ -70,7 +70,7 @@ class Fitness implements Comparable<Fitness>{
 	
 	public static double calculateFitness(Instance instance, Node customer, Route route) {
 		double[][] distance = instance.getDistanceMatrix();
-		
+		// 这里计算方式有点没理解..
 		double fitness = 
 				(route.getCost().getTimeViolation() + route.getCost().getLoadViolation() + customer.getDemand()) * 
 				( distance[customer.getId()][route.getRoute().get(0).getId()] +

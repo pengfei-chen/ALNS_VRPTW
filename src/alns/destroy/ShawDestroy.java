@@ -76,7 +76,7 @@ public class ShawDestroy extends ALNSAbstractOperation implements IALNSDestroy {
 		double[][] distance = s.instance.getDistanceMatrix();
 		
 		while(s.removalCustomers.size() < removeNr ) {
-			
+			// 这里的作用是啥？ 计算 fitness 选择删除点嘛？
 			double minRelate = Double.MAX_VALUE;
 			
 			for(int j = 0; j < s.routes.size(); j++) {			
